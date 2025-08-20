@@ -1,310 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SaaS Modern Landing Page</title>
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
-
-    body {
-      background: #0f172a;
-      color: #f8fafc;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Navbar */
-    nav {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-    }
-
-    nav h1 {
-      font-size: 1.8rem;
-      font-weight: bold;
-      background: linear-gradient(90deg, #38bdf8, #fbbf24);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #38bdf8;
-    }
-
-    /* Hero Section */
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-    }
-
-    .hero h2 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #94a3b8;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      padding: 12px 25px;
-      border-radius: 30px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-      display: inline-block;
-    }
-
-    .btn-primary {
-      background: linear-gradient(90deg, #38bdf8, #fbbf24);
-      color: #0f172a;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(56,189,248,0.4);
-    }
-
-    .btn-secondary {
-      border: 2px solid #38bdf8;
-      color: #38bdf8;
-      margin-left: 15px;
-    }
-
-    .btn-secondary:hover {
-      background: #38bdf8;
-      color: #0f172a;
-    }
-
-    /* Features */
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: #fbbf24;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-
-    .feature {
-      background: rgba(255,255,255,0.05);
-      padding: 30px;
-      border-radius: 15px;
-      transition: transform 0.3s;
-    }
-
-    .feature:hover {
-      transform: translateY(-10px);
-    }
-
-    .feature h3 {
-      color: #38bdf8;
-      margin-bottom: 10px;
-    }
-
-    /* Pricing */
-    .pricing {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .price-card {
-      background: rgba(255,255,255,0.07);
-      padding: 40px 25px;
-      border-radius: 15px;
-      transition: transform 0.3s, background 0.3s;
-    }
-
-    .price-card:hover {
-      transform: translateY(-10px) scale(1.02);
-      background: rgba(255,255,255,0.1);
-    }
-
-    .price-card h3 {
-      margin-bottom: 10px;
-      color: #38bdf8;
-    }
-
-    .price-card p {
-      margin: 15px 0;
-      color: #cbd5e1;
-    }
-
-    .price {
-      font-size: 2rem;
-      margin: 20px 0;
-      font-weight: bold;
-      color: #fbbf24;
-    }
-
-    /* Testimonials */
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .testimonial {
-      background: rgba(255,255,255,0.05);
-      padding: 25px;
-      border-radius: 15px;
-      font-style: italic;
-    }
-
-    .testimonial span {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-      color: #38bdf8;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #0f172a;
-      color: #94a3b8;
-      margin-top: 60px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudFlow - Modern SaaS Solution</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .floating-animation {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .hero-shape {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.7;
+        }
+        
+        .pricing-popular {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+        }
+        
+        .pricing-popular::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .feature-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .testimonial-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .cta-glow {
+            box-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
+                        <i class="fas fa-cloud text-white"></i>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">CloudFlow</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-gray-900 transition-colors">Testimonials</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+                </div>
+                <div class="flex space-x-4">
+                    <button class="text-gray-600 hover:text-gray-900 transition-colors">Sign In</button>
+                    <button class="gradient-bg text-white px-6 py-2 rounded-lg hover:opacity-90 transition-opacity">Get Started</button>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-  <!-- Navbar -->
-  <nav>
-    <h1>MySaaS</h1>
-    <ul>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="hero-shape absolute top-20 left-20 w-72 h-72 floating-animation"></div>
+        <div class="hero-shape absolute bottom-20 right-20 w-96 h-96 floating-animation" style="animation-delay: -3s;"></div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10 fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                Transform Your 
+                <span class="gradient-text">Workflow</span>
+                <br>Into Success
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Streamline your business operations with our cutting-edge SaaS platform. 
+                Boost productivity, enhance collaboration, and scale effortlessly.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <button class="gradient-bg text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition-all pulse-animation cta-glow">
+                    Start Free Trial
+                </button>
+                <button class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-gray-400 transition-colors">
+                    Watch Demo
+                </button>
+            </div>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <div class="text-3xl font-bold gradient-text">99.9%</div>
+                    <div class="text-gray-600">Uptime</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold gradient-text">10k+</div>
+                    <div class="text-gray-600">Happy Customers</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold gradient-text">24/7</div>
+                    <div class="text-gray-600">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h2>Grow Your Business with MySaaS 🚀</h2>
-    <p>Modern tools and solutions to scale your business and boost productivity.</p>
-    <a href="#pricing" class="btn btn-primary">Get Started</a>
-    <a href="#features" class="btn btn-secondary">Learn More</a>
-  </section>
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Powerful Features for 
+                    <span class="gradient-text">Modern Teams</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Discover the tools that will revolutionize how your team works together
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                    <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Lightning Fast</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Experience blazing-fast performance with our optimized infrastructure and intelligent caching systems.
+                    </p>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                    <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Bank-Level Security</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Your data is protected with enterprise-grade encryption and multi-factor authentication.
+                    </p>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                    <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Team Collaboration</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Real-time collaboration tools that keep your team in sync, no matter where they are.
+                    </p>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                    <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Advanced Analytics</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Get deep insights into your business with comprehensive analytics and reporting tools.
+                    </p>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                    <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Easy Integration</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Seamlessly integrate with your existing tools and workflows with our robust API.
+                    </p>
+                </div>
+                
+                <div class="card-hover bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                    <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Mobile First</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Access your workspace from anywhere with our responsive design and mobile apps.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Features -->
-  <section class="section" id="features">
-    <h2>Features</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>⚡ Fast Performance</h3>
-        <p>Experience blazing fast load times and efficient workflows.</p>
-      </div>
-      <div class="feature">
-        <h3>☁️ Cloud Ready</h3>
-        <p>Secure and scalable cloud infrastructure at your fingertips.</p>
-      </div>
-      <div class="feature">
-        <h3>🔒 Secure</h3>
-        <p>Advanced security and encryption to protect your data.</p>
-      </div>
-      <div class="feature">
-        <h3>📊 Analytics</h3>
-        <p>Gain insights with powerful analytics and reporting tools.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Simple, Transparent 
+                    <span class="gradient-text">Pricing</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choose the perfect plan for your team. No hidden fees, no surprises.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="card-hover bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                        <p class="text-gray-600 mb-4">Perfect for small teams</p>
+                        <div class="text-4xl font-bold text-gray-900">
+                            $19
+                            <span class="text-lg text-gray-600 font-normal">/month</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600">Up to 5 team members</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600">10GB storage</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600">Basic integrations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600">Email support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full border-2 border-gray-300 text-gray-700 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Professional Plan -->
+                <div class="card-hover bg-white p-8 rounded-2xl border-2 border-purple-500 shadow-xl pricing-popular text-white">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                        <p class="text-purple-100 mb-4">Most popular choice</p>
+                        <div class="text-4xl font-bold">
+                            $49
+                            <span class="text-lg text-purple-100 font-normal">/month</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            <span class="text-purple-100">Up to 25 team members</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            <span class="text-purple-100">100GB storage</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            <span class="text-purple-100">Advanced integrations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            <span class="text-purple-100">Priority support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            <span class="text-purple-100">Advanced analytics</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-purple-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="card-hover bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                        <p class="text-gray-600 mb-4">For large organizations</p>
+                        <div class="text-4xl font-bold text-gray-900">
+                            $99
+                            <span class="text-lg text-gray-600 font-normal">/month</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600">Unlimited team members</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600">1TB storage</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600">Custom integrations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600">24/7 phone support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600">Custom reporting</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="text-gray-600">SSO & SAML</span>
+                        </li>
+                    </ul>
+                    <button class="w-full border-2 border-gray-300 text-gray-700 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Pricing -->
-  <section class="section" id="pricing">
-    <h2>Pricing Plans</h2>
-    <div class="pricing">
-      <div class="price-card">
-        <h3>Starter</h3>
-        <p>Perfect for small businesses</p>
-        <div class="price">$19/mo</div>
-        <a href="#" class="btn btn-primary">Choose Plan</a>
-      </div>
-      <div class="price-card">
-        <h3>Professional</h3>
-        <p>Ideal for growing teams</p>
-        <div class="price">$49/mo</div>
-        <a href="#" class="btn btn-primary">Choose Plan</a>
-      </div>
-      <div class="price-card">
-        <h3>Enterprise</h3>
-        <p>Custom solutions for enterprises</p>
-        <div class="price">$99/mo</div>
-        <a href="#" class="btn btn-primary">Choose Plan</a>
-      </div>
-    </div>
-  </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    What Our 
+                    <span class="gradient-text">Customers Say</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Join thousands of satisfied customers who have transformed their workflow
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <div class="font-bold text-gray-900">Sarah Johnson</div>
+                            <div class="text-gray-600">CEO, TechStart</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "CloudFlow has completely revolutionized how our team collaborates. The intuitive interface and powerful features have increased our productivity by 40%."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <div class="font-bold text-gray-900">Michael Chen</div>
+                            <div class="text-gray-600">CTO, DataCorp</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "The analytics and reporting features are incredible. We can now make data-driven decisions faster than ever before. Highly recommended!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-2xl shadow-lg card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <div class="font-bold text-gray-900">Emily Rodriguez</div>
+                            <div class="text-gray-600">Product Manager, InnovateLab</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "The seamless integrations saved us months of development time. CloudFlow just works, and it works beautifully."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Testimonials -->
-  <section class="section" id="testimonials">
-    <h2>What Our Customers Say</h2>
-    <div class="testimonials">
-      <div class="testimonial">
-        "MySaaS completely transformed how we manage our workflows!"
-        <span>- Alex, Startup Founder</span>
-      </div>
-      <div class="testimonial">
-        "Reliable, fast, and easy to use. Highly recommended!"
-        <span>- Priya, Product Manager</span>
-      </div>
-      <div class="testimonial">
-        "The analytics dashboard gave us incredible insights."
-        <span>- John, CEO</span>
-      </div>
-    </div>
-  </section>
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Workflow?
+            </h2>
+            <p class="text-xl text-purple-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Join thousands of teams who have already transformed their productivity with CloudFlow. 
+                Start your free trial today and experience the difference.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <button class="bg-white text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors pulse-animation">
+                    Start Free Trial
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                    Schedule Demo
+                </button>
+            </div>
+            <p class="text-purple-200 mt-6">
+                No credit card required • 14-day free trial • Cancel anytime
+            </p>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer id="contact">
-    <p>© 2025 MySaaS. All rights reserved.</p>
-    <p>Contact us: support@mysaas.com</p>
-  </footer>
-
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
+                            <i class="fas fa-cloud text-white"></i>
+                        </div>
+                        <span class="text-2xl font-bold">CloudFlow</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        Transforming workflows and empowering teams to achieve more together.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Product</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Integrations</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">API</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Support</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Status</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-gray-700 my-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">
+                    © 2024 CloudFlow. All rights reserved.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
