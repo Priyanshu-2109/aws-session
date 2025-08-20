@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Priyanshu Chaniyara - Portfolio</title>
+  <title>SaaS Modern Landing Page</title>
   <style>
     /* Reset */
     * {
@@ -14,266 +14,297 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+      background: #0f172a;
       color: #f8fafc;
+      line-height: 1.6;
       overflow-x: hidden;
     }
 
-    header {
-      text-align: center;
-      padding: 80px 20px 40px;
-      position: relative;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    header h1 {
-      font-size: 3.5rem;
-      background: linear-gradient(90deg, #38bdf8, #fbbf24);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 700;
-      animation: fadeDown 1s ease-out;
-    }
-
-    header p {
-      margin-top: 15px;
-      font-size: 1.3rem;
-      color: #94a3b8;
-    }
-
-    .typing {
-      color: #fbbf24;
-      font-weight: bold;
-      font-size: 1.4rem;
-      border-right: 2px solid #fbbf24;
-      white-space: nowrap;
-      overflow: hidden;
-      display: inline-block;
-    }
-
+    /* Navbar */
     nav {
-      margin-top: 25px;
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: #f8fafc;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 8px 15px;
-      border-radius: 20px;
-      transition: background 0.3s ease;
-    }
-
-    nav a:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .resume-btn {
-      margin-top: 30px;
-      display: inline-block;
-      padding: 12px 25px;
-      background: linear-gradient(90deg, #38bdf8, #fbbf24);
-      color: #0f172a;
-      border-radius: 30px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .resume-btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 20px;
     }
 
-    section {
-      margin-bottom: 80px;
-      padding: 40px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 20px;
-      backdrop-filter: blur(15px);
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.8s ease;
+    nav h1 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #38bdf8, #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
     }
 
-    h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      color: #fbbf24;
-      border-left: 5px solid #38bdf8;
-      padding-left: 12px;
+    nav ul li a {
+      font-weight: 500;
+      transition: color 0.3s;
     }
 
-    p, li {
-      font-size: 1.1rem;
-      color: #e2e8f0;
-    }
-
-    ul {
-      margin-left: 20px;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 20px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.07);
-      border-radius: 15px;
-      padding: 25px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-12px) scale(1.03);
-      background: rgba(255,255,255,0.12);
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
+    nav ul li a:hover {
       color: #38bdf8;
     }
 
-    footer {
+    /* Hero Section */
+    .hero {
       text-align: center;
-      padding: 25px;
-      background: #0f172a;
-      color: #94a3b8;
-      margin-top: 50px;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
     }
 
-    /* Animations */
-    @keyframes fadeDown {
-      from {opacity: 0; transform: translateY(-30px);}
-      to {opacity: 1; transform: translateY(0);}
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #94a3b8;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #38bdf8, #fbbf24);
+      color: #0f172a;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(56,189,248,0.4);
+    }
+
+    .btn-secondary {
+      border: 2px solid #38bdf8;
+      color: #38bdf8;
+      margin-left: 15px;
+    }
+
+    .btn-secondary:hover {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    /* Features */
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #fbbf24;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .feature {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 15px;
+      transition: transform 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature h3 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    /* Pricing */
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .price-card {
+      background: rgba(255,255,255,0.07);
+      padding: 40px 25px;
+      border-radius: 15px;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .price-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .price-card h3 {
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+
+    .price-card p {
+      margin: 15px 0;
+      color: #cbd5e1;
+    }
+
+    .price {
+      font-size: 2rem;
+      margin: 20px 0;
+      font-weight: bold;
+      color: #fbbf24;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .testimonial {
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-radius: 15px;
+      font-style: italic;
+    }
+
+    .testimonial span {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #0f172a;
+      color: #94a3b8;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Priyanshu Chaniyara</h1>
-    <p><span class="typing"></span></p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a href="#" class="resume-btn">📄 Download Resume</a>
-  </header>
+  <!-- Navbar -->
+  <nav>
+    <h1>MySaaS</h1>
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <div class="container">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hi 👋 I’m <strong>Priyanshu</strong>, a Full Stack Developer and Computer Science student at CHARUSAT.  
-        I love building <strong>MERN stack</strong> applications, experimenting with <strong>3D web apps</strong>, and exploring <strong>AWS cloud technologies</strong>.  
-        My journey is all about creating innovative solutions that make an impact.
-      </p>
-    </section>
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Grow Your Business with MySaaS 🚀</h2>
+    <p>Modern tools and solutions to scale your business and boost productivity.</p>
+    <a href="#pricing" class="btn btn-primary">Get Started</a>
+    <a href="#features" class="btn btn-secondary">Learn More</a>
+  </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="card-grid">
-        <div class="card"><h3>Frontend</h3><p>React, Next.js, TailwindCSS, Framer Motion</p></div>
-        <div class="card"><h3>Backend</h3><p>Node.js, Express.js, REST APIs</p></div>
-        <div class="card"><h3>Databases</h3><p>MongoDB, MySQL, ADO.NET</p></div>
-        <div class="card"><h3>Other</h3><p>AWS, Clerk Auth, Git, Sentry</p></div>
+  <!-- Features -->
+  <section class="section" id="features">
+    <h2>Features</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>⚡ Fast Performance</h3>
+        <p>Experience blazing fast load times and efficient workflows.</p>
       </div>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>JobDekho</h3>
-          <p>A full-stack job portal for seekers & recruiters with Clerk authentication and Sentry integration.</p>
-        </div>
-        <div class="card">
-          <h3>EatEasy</h3>
-          <p>A MERN-based food ordering app with admin panel for managing orders in real-time.</p>
-        </div>
-        <div class="card">
-          <h3>Doctor Appointment System</h3>
-          <p>3-panel system with chat, video calling, and AI chatbot integration for healthcare support.</p>
-        </div>
-        <div class="card">
-          <h3>3D Product Catalog</h3>
-          <p>An interactive MERN platform to showcase and customize 3D models with color & texture options.</p>
-        </div>
+      <div class="feature">
+        <h3>☁️ Cloud Ready</h3>
+        <p>Secure and scalable cloud infrastructure at your fingertips.</p>
       </div>
-    </section>
+      <div class="feature">
+        <h3>🔒 Secure</h3>
+        <p>Advanced security and encryption to protect your data.</p>
+      </div>
+      <div class="feature">
+        <h3>📊 Analytics</h3>
+        <p>Gain insights with powerful analytics and reporting tools.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Let’s connect and build something amazing 🚀</p>
-      <ul>
-        <li>Email: <a href="mailto:priyanshuchaniyara@gmail.com" style="color:#38bdf8;">priyanshuchaniyara@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com" target="_blank" style="color:#38bdf8;">linkedin.com/in/priyanshu</a></li>
-        <li>GitHub: <a href="https://github.com" target="_blank" style="color:#38bdf8;">github.com/priyanshu</a></li>
-      </ul>
-    </section>
-  </div>
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <h2>Pricing Plans</h2>
+    <div class="pricing">
+      <div class="price-card">
+        <h3>Starter</h3>
+        <p>Perfect for small businesses</p>
+        <div class="price">$19/mo</div>
+        <a href="#" class="btn btn-primary">Choose Plan</a>
+      </div>
+      <div class="price-card">
+        <h3>Professional</h3>
+        <p>Ideal for growing teams</p>
+        <div class="price">$49/mo</div>
+        <a href="#" class="btn btn-primary">Choose Plan</a>
+      </div>
+      <div class="price-card">
+        <h3>Enterprise</h3>
+        <p>Custom solutions for enterprises</p>
+        <div class="price">$99/mo</div>
+        <a href="#" class="btn btn-primary">Choose Plan</a>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2025 Priyanshu Chaniyara | Built with ❤️ and Creativity</p>
+  <!-- Testimonials -->
+  <section class="section" id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        "MySaaS completely transformed how we manage our workflows!"
+        <span>- Alex, Startup Founder</span>
+      </div>
+      <div class="testimonial">
+        "Reliable, fast, and easy to use. Highly recommended!"
+        <span>- Priya, Product Manager</span>
+      </div>
+      <div class="testimonial">
+        "The analytics dashboard gave us incredible insights."
+        <span>- John, CEO</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2025 MySaaS. All rights reserved.</p>
+    <p>Contact us: support@mysaas.com</p>
   </footer>
 
-  <script>
-    // Typing Effect
-    const texts = ["Full Stack Developer", "MERN Stack Enthusiast", "Cloud Explorer", "Problem Solver"];
-    let i = 0, j = 0;
-    const typingSpan = document.querySelector(".typing");
-
-    function type() {
-      if (j < texts[i].length) {
-        typingSpan.textContent += texts[i][j];
-        j++;
-        setTimeout(type, 100);
-      } else {
-        setTimeout(erase, 2000);
-      }
-    }
-
-    function erase() {
-      if (j > 0) {
-        typingSpan.textContent = texts[i].substring(0, j-1);
-        j--;
-        setTimeout(erase, 50);
-      } else {
-        i = (i+1) % texts.length;
-        setTimeout(type, 500);
-      }
-    }
-
-    type();
-
-    // Scroll Reveal
-    const sections = document.querySelectorAll("section");
-    window.addEventListener("scroll", () => {
-      sections.forEach(sec => {
-        const rect = sec.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          sec.classList.add("visible");
-        }
-      });
-    });
-  </script>
 </body>
 </html>
