@@ -14,41 +14,75 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
+      background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
       color: #f8fafc;
-      line-height: 1.6;
+      overflow-x: hidden;
     }
 
     header {
       text-align: center;
-      padding: 50px 20px;
+      padding: 80px 20px 40px;
+      position: relative;
     }
 
     header h1 {
-      font-size: 3rem;
-      color: #38bdf8;
+      font-size: 3.5rem;
+      background: linear-gradient(90deg, #38bdf8, #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      animation: fadeDown 1s ease-out;
     }
 
     header p {
-      margin-top: 10px;
-      font-size: 1.2rem;
+      margin-top: 15px;
+      font-size: 1.3rem;
       color: #94a3b8;
     }
 
+    .typing {
+      color: #fbbf24;
+      font-weight: bold;
+      font-size: 1.4rem;
+      border-right: 2px solid #fbbf24;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+    }
+
     nav {
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     nav a {
       margin: 0 15px;
-      color: #fbbf24;
+      color: #f8fafc;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s ease;
+      padding: 8px 15px;
+      border-radius: 20px;
+      transition: background 0.3s ease;
     }
 
     nav a:hover {
-      color: #38bdf8;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .resume-btn {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(90deg, #38bdf8, #fbbf24);
+      color: #0f172a;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .resume-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
     }
 
     .container {
@@ -58,7 +92,11 @@
     }
 
     section {
-      margin-bottom: 60px;
+      margin-bottom: 80px;
+      padding: 40px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
       opacity: 0;
       transform: translateY(50px);
       transition: all 0.8s ease;
@@ -70,11 +108,11 @@
     }
 
     h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
       color: #fbbf24;
       border-left: 5px solid #38bdf8;
-      padding-left: 10px;
+      padding-left: 12px;
     }
 
     p, li {
@@ -89,43 +127,40 @@
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 25px;
       margin-top: 20px;
     }
 
     .card {
-      background: #1e293b;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      background: rgba(255,255,255,0.07);
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       transition: transform 0.3s ease, background 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-10px);
-      background: #334155;
+      transform: translateY(-12px) scale(1.03);
+      background: rgba(255,255,255,0.12);
     }
 
     .card h3 {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       color: #38bdf8;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       background: #0f172a;
       color: #94a3b8;
+      margin-top: 50px;
     }
 
-    .typing {
-      color: #fbbf24;
-      font-weight: bold;
-      font-size: 1.3rem;
-      border-right: 2px solid #fbbf24;
-      white-space: nowrap;
-      overflow: hidden;
-      display: inline-block;
+    /* Animations */
+    @keyframes fadeDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
@@ -135,20 +170,21 @@
     <h1>Priyanshu Chaniyara</h1>
     <p><span class="typing"></span></p>
     <nav>
-      <a href="#about">About Me</a>
+      <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a href="#" class="resume-btn">📄 Download Resume</a>
   </header>
 
   <div class="container">
     <section id="about">
       <h2>About Me</h2>
       <p>
-        Hi 👋 I’m <strong>Priyanshu</strong>, a passionate Full Stack Developer and Computer Science student at CHARUSAT.  
-        I love building web applications using the MERN stack, exploring cloud technologies, and solving problems with code.  
-        Currently, I am working on exciting projects in e-commerce, healthcare, and 3D web apps.
+        Hi 👋 I’m <strong>Priyanshu</strong>, a Full Stack Developer and Computer Science student at CHARUSAT.  
+        I love building <strong>MERN stack</strong> applications, experimenting with <strong>3D web apps</strong>, and exploring <strong>AWS cloud technologies</strong>.  
+        My journey is all about creating innovative solutions that make an impact.
       </p>
     </section>
 
@@ -158,7 +194,7 @@
         <div class="card"><h3>Frontend</h3><p>React, Next.js, TailwindCSS, Framer Motion</p></div>
         <div class="card"><h3>Backend</h3><p>Node.js, Express.js, REST APIs</p></div>
         <div class="card"><h3>Databases</h3><p>MongoDB, MySQL, ADO.NET</p></div>
-        <div class="card"><h3>Other</h3><p>AWS, Clerk Auth, Sentry, Git</p></div>
+        <div class="card"><h3>Other</h3><p>AWS, Clerk Auth, Git, Sentry</p></div>
       </div>
     </section>
 
@@ -167,26 +203,26 @@
       <div class="card-grid">
         <div class="card">
           <h3>JobDekho</h3>
-          <p>A full-stack job portal for seekers & recruiters with authentication and analytics.</p>
+          <p>A full-stack job portal for seekers & recruiters with Clerk authentication and Sentry integration.</p>
         </div>
         <div class="card">
           <h3>EatEasy</h3>
-          <p>A MERN-based food ordering app with admin panel for managing orders.</p>
+          <p>A MERN-based food ordering app with admin panel for managing orders in real-time.</p>
         </div>
         <div class="card">
           <h3>Doctor Appointment System</h3>
-          <p>3-panel system with chat, video calling, and AI-powered chatbot.</p>
+          <p>3-panel system with chat, video calling, and AI chatbot integration for healthcare support.</p>
         </div>
         <div class="card">
           <h3>3D Product Catalog</h3>
-          <p>Interactive MERN platform to showcase and customize 3D products.</p>
+          <p>An interactive MERN platform to showcase and customize 3D models with color & texture options.</p>
         </div>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>If you’d like to connect, feel free to reach me:</p>
+      <p>Let’s connect and build something amazing 🚀</p>
       <ul>
         <li>Email: <a href="mailto:priyanshuchaniyara@gmail.com" style="color:#38bdf8;">priyanshuchaniyara@gmail.com</a></li>
         <li>LinkedIn: <a href="https://linkedin.com" target="_blank" style="color:#38bdf8;">linkedin.com/in/priyanshu</a></li>
@@ -196,7 +232,7 @@
   </div>
 
   <footer>
-    <p>© 2025 Priyanshu Chaniyara | Built with ❤️ and JavaScript</p>
+    <p>© 2025 Priyanshu Chaniyara | Built with ❤️ and Creativity</p>
   </footer>
 
   <script>
